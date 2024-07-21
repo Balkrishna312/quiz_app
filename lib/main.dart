@@ -38,7 +38,7 @@ class QuizApp extends StatelessWidget {
       body: SafeArea(
         child: Container(
           width: double.infinity,
-          height: double.infinity,
+          height: MediaQuery.of(context).size.height,
           padding: const EdgeInsets.all(12),
           decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -64,6 +64,7 @@ class QuizApp extends StatelessWidget {
               ),
               Image.asset(
                 balloon2,
+                height: MediaQuery.of(context).size.height / 2,
               ),
               const SizedBox(height: 20),
               normalText(color: lightgrey, size: 18, text: "Welcome to our"),
